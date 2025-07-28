@@ -71,7 +71,7 @@ with st.container():
         review = st.text_area(
             "Please give feedback", value=st.session_state.review, key="review"
         )
-        submitted = st.form_submit_button("Submit")
+        submitted = st.form_submit_button("Submit", use_container_width=True)
 
 if submitted:
     if name and phone_number and review:
