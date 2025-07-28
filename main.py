@@ -35,7 +35,8 @@ st.sidebar.image("logo.png", use_container_width=True)
 
 st.markdown('<h1 class="title">Review Submission Form</h1>', unsafe_allow_html=True)
 
-client = MongoClient("mongodb://localhost:27017/")
+mongo_uri = r"mongodb+srv://chandihrishikesh:ODR7ROERjkRmftPX@cluster0.pwrmu8c.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+client = MongoClient(mongo_uri)
 db = client["MedicalDB"]
 collections = db["reviews"]
 
